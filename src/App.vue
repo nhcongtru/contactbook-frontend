@@ -8,7 +8,7 @@ export default {
 }
 </script>
 <template>
-  <div id="app">
+  <div>
     <AppHeader />
     <div class="container mt-3">
       <router-view />

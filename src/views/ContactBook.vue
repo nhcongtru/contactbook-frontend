@@ -1,7 +1,5 @@
-
-
 <template>
-    <div class="page row">
+    <div class="page row mx-auto">
         <div class="col-md-10">
             <InputSearch v-model="searchText" />
         </div>
@@ -32,6 +30,13 @@
                     <i class="fas fa-address-card"></i>
                 </h4>
                 <ContactCard :contact="activeContact" />
+                <router-link :to="{
+                name: 'contact.edit',
+                params: { id: activeContact._id },
+            }">
+                    <span class="mt-2 badge badge-warning">
+                        <i class="fas fa-edit"></i> Hiệu chỉnh</span>
+                </router-link>
             </div>
         </div>
     </div>
